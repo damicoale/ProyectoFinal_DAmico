@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 3 // Simulador Plazo Fijo</title>
+    <!-- link al css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- link a toasty -->
+    <link href="./dist/toasty.min.css" rel="stylesheet">
+    <script defer src="./dist/toasty.min.js"></script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <section>
+            <section class='Titulo'>
+                <h2 id="titulo"></h2>
+            </section>
+            <section>
+                <p id="Saludo"></p>
+            </section>
+            <section class='FlexContainer'>
+                <div>
+                    <p id="Inst_PF_Peso"></p>
+                </div>
+                <div>
+                    <p id="Inst_PF_Dolar"></p>
+                </div>
+            </section>
+            <section>
+                <p id="Despedida"></p>
+            </section>
+            <section>
+                <p id="Int_Gan" class="Intereses_Ganados"></p>
+            </section>
+            <section>
+                <p id="Cot_Dol" class="Cotizacion_Dolar"></p>
+            </section>
+        </section>
+        <form id="formulario" class="Form_PF">
+            <div>
+                <label for="moneda">Moneda:</label>
+                <select id="cbo_moneda" name="moneda">
+                    <option value="1">Pesos argentinos</option>
+                    <option value="2">Dólares estadounidenses</option>
+                </select>
+            </div>
+            <div>
+                <label for="monto">Monto:</label>
+                <input type="number" id="txt_monto" name="monto" min="0" step="0.01">
+            </div>
+            <div>
+                <label for="plazo">Plazo (en días):</label>
+                <input type="number" id="txt_plazo" name="plazo" min="1" step="1">
+            </div>
+            <div>
+                <label for="reinvertir">Cantidad de veces a reinvertir:</label>
+                <input type="number" id="txt_reinvertir" name="reinvertir" min="0" step="1">
+            </div>
+            <div>
+                <button id="enviar">Enviar</button>
+                <button id="limpiar">Limpiar</button>
+            </div>
+        </form>
+        <section>
+            <p id="resultado"></p>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <!-- link al js -->
+    <script defer src="./js/script.js"></script>
+</body>
+
+</html>
